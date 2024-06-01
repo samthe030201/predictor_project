@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Artist Popularity Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://developer.spotify.com/images/guidelines/design/icon3@2x.png" alt="Spotify Logo" class="logo">
+        <h1>Spotify Artist Popularity Prediction</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="markets">Markets:</label>
+                <input type="number" id="markets" name="markets" required>
+            </div>
+            <div class="form-group">
+                <label for="duration_ms">Duration (ms):</label>
+                <input type="number" id="duration_ms" name="duration_ms" required>
+            </div>
+            <div class="form-group">
+                <label for="acousticness">Acousticness:</label>
+                <input type="number" step="0.01" id="acousticness" name="acousticness" required>
+            </div>
+            <div class="form-group">
+                <label for="danceability">Danceability:</label>
+                <input type="number" step="0.01" id="danceability" name="danceability" required>
+            </div>
+            <div class="form-group">
+                <label for="energy">Energy:</label>
+                <input type="number" step="0.01" id="energy" name="energy" required>
+            </div>
+            <div class="form-group">
+                <label for="instrumentalness">Instrumentalness:</label>
+                <input type="number" step="0.01" id="instrumentalness" name="instrumentalness" required>
+            </div>
+            <div class="form-group">
+                <label for="liveness">Liveness:</label>
+                <input type="number" step="0.01" id="liveness" name="liveness" required>
+            </div>
+            <div class="form-group">
+                <label for="loudness">Loudness (dB):</label>
+                <input type="number" step="0.01" id="loudness" name="loudness" required>
+            </div>
+            <div class="form-group">
+                <label for="speechiness">Speechiness:</label>
+                <input type="number" step="0.01" id="speechiness" name="speechiness" required>
+            </div>
+            <div class="form-group">
+                <label for="tempo">Tempo (BPM):</label>
+                <input type="number" step="0.01" id="tempo" name="tempo" required>
+            </div>
+            <div class="form-group">
+                <label for="valence">Valence:</label>
+                <input type="number" step="0.01" id="valence" name="valence" required>
+            </div>
+            <div class="form-group">
+                <label for="musicalkey">Musical Key:</label>
+                <input type="number" id="musicalkey" name="musicalkey" required>
+            </div>
+            <div class="form-group">
+                <label for="musicalmode">Musical Mode:</label>
+                <input type="number" id="musicalmode" name="musicalmode" required>
+            </div>
+            <div class="form-group">
+                <label for="time_signature">Time Signature:</label>
+                <input type="number" id="time_signature" name="time_signature" required>
+            </div>
+            <div class="form-group">
+                <label for="count">Count:</label>
+                <input type="number" id="count" name="count" required>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="generateRandomValues()">Generate Random Values</button>
+                <button type="button" onclick="clearFormValues()">Clear Values</button>
+            </div>
+            <div class="form-group">
+                <button type="submit">Predict Popularity</button>
+            </div>
+            
+        </form>
+        <div id="predictionResult"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

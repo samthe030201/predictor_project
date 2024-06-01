@@ -1,0 +1,5 @@
+Flask==2.1.1
+Flask-Cors==3.0.10
+numpy==1.22.0
+scikit-learn==1.0.2
+setuptools==65.5.0

@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/app1.py",
+        "use": "@vercel/python",
+        "config": {
+          "installCommand": "sh build.sh && pip install -r requirements.txt",
+          "pythonVersion": "3.9"
+        }
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/app1.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
+      }
+    ]
+  }
+  
