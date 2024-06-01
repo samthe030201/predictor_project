@@ -6,7 +6,7 @@
         "use": "@vercel/python",
         "config": {
           "installCommand": "sh build.sh && pip install -r requirements.txt",
-          "pythonVersion": "3.9"
+          "pythonVersion": "3.3"
         }
       },
       {
