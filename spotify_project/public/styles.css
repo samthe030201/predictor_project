@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(25, 20, 20, 0.8));
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: moveBackground 10s infinite, glowEffect 3s ease-in-out infinite, changeBackground 7s ease-in-out infinite ;
+    position: relative;}
+
+        @keyframes moveBackground {
+        0% {
+            background-position: 0 0;
+        }
+        25% {
+            background-position: 5% 5%;
+        }
+        50% {
+            background-position: 10% 10%;
+        }
+        75% {
+            background-position: 5% 5%;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+@keyframes glowEffect {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(29, 185, 84, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(29, 185, 84, 1);
+    }
+}
+
+@keyframes changeBackground {
+    0%, 33.33% {
+        background-image: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(25, 20, 20, 0.8)), url('https://images.pexels.com/photos/60883/girl-eyes-makeup-sexy-60883.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+    }
+    33.34%, 66.66% {
+        background-image: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(25, 20, 20, 0.8)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-207081.jpeg');
+    }
+    66.67%, 100% {
+        background-image: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(25, 20, 20, 0.8)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/pexels-photo-432059.jpeg');
+    }
+}
+
+
+.container {
+    background: rgba(26, 23, 23, 0.7); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(25, 21, 21, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    height: 95%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    max-height: 90%; 
+    overflow-y: auto;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 15px;
+    max-height: min-content;
+    max-width: min-content;
+    box-sizing: inherit;
+}
+.container:hover {
+    background: rgba(25, 20, 20, 0.90);
+    transform: scale(1.02);
+}
+::-webkit-scrollbar {
+    width: 5px; /* Adjust the width to make it sleeker */
+    color: #171717;
+}
+::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(26, 23, 23, 0.7); /* Slightly visible thumb */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h1 {
+    color: #1DB954;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #179e46;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 2px solid #1DB954;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.822);
+    color: #171717;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1DB954;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+button:hover {
+    background-color: #14843B;
+}
+
+#predictionResult {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 40%;
+    }
+}
