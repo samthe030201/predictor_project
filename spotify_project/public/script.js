@@ -20,7 +20,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 });
 
 function submitResponse() {
-document.getElementById('predictionResult').value = 'Python Server is Down. Please Try again later';
+document.getElementById('predictionResult').innerText = 'Python Server is Down. Please Try again later';
 }
 function generateRandomValues() {
     document.getElementById('markets').value = Math.floor(Math.random() * 100);
