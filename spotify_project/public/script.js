@@ -12,7 +12,9 @@ document.querySelector('form').addEventListener('submit', function(e) {
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
+    .then(response => {
+        'predictionResult':'The Server is currently facing boot issues. Please try again later'
+    })
     .then(data => {
         document.getElementById('predictionResult').innerText = data.prediction;
     })
