@@ -1,14 +1,27 @@
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    (response => {
-        'predictionResult':'The Server is currently facing boot issues. Please try again later'
+    let formData = new FormData(e.target);
+    let data = {};
+    formData.forEach((value, key) => data[key] = value);
+
+    fetch('/api/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
-    (data => {
+    .then(response => response.json())
+    .then(data => {
         document.getElementById('predictionResult').innerText = data.prediction;
     })
     .catch(error => console.error('Error:', error));
 });
+
+function submitResponse() {
+document.getElementById('predictionResult').value = 'Python Server is Down. Please Try again later';
+}
 function generateRandomValues() {
     document.getElementById('markets').value = Math.floor(Math.random() * 100);
     document.getElementById('duration_ms').value = Math.floor(Math.random() * 300000);
