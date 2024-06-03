@@ -1,21 +1,10 @@
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let formData = new FormData(e.target);
-    let data = {};
-    formData.forEach((value, key) => data[key] = value);
-
-    fetch('/api/predict', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
+    (response => {
         'predictionResult':'The Server is currently facing boot issues. Please try again later'
     })
-    .then(data => {
+    (data => {
         document.getElementById('predictionResult').innerText = data.prediction;
     })
     .catch(error => console.error('Error:', error));
